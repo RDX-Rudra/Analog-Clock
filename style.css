@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #081b29;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number_hours {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.number_hours span {
+    position: absolute;
+    transform: rotate(calc(var(--index) * 30deg));
+    inset: 6px;
+    text-align: center;
+}
+
+.number_hours span p {
+    font-size: 52px;
+    color: rgb(6, 146, 148);
+    text-shadow: 0 0 10px rgb(6, 146, 148);
+    transform: rotate(calc(var(--index) * -30deg));
+}
+
+.hands-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 250px;
+}
+
+.hands-box .hand {
+    position:absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.hands-box .hand i {
+    display: inline-block;
+    transform-origin: bottom;
+    border-radius: 50%;
+}
+
+.hands-box .hours {
+    width: 320px;
+    height: 320px;
+}
+
+.hands-box .hours i{
+    width: 10px;
+    height: 160px;
+    background: red;
+    transform: rotate(40deg);
+}
+
+.hands-box .minutes {
+    width: 450px;
+    height: 450px;
+}
+
+.hands-box .minutes i{
+    width: 7px;
+    height: 225px;
+    background: yellow;
+    transform: rotate(230deg);
+}
+
+.hands-box .seconds {
+    width: 480px;
+    height: 480px;
+}
+
+.hands-box .seconds i{
+    width: 4px;
+    height: 240px;
+    background: white;
+    transform: rotate(160deg);
+}
