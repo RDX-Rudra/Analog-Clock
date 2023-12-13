@@ -156,7 +156,7 @@ body{
     box-shadow: none;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     .wrapper {
         position: fixed;
         width: 345px;
@@ -185,6 +185,61 @@ body{
     .hands-box .hours {
         width: 250px;
         height: 250px;
+    }
+
+    .hands-box .seconds i{
+        width: 4px;
+        height: calc(225px);
+        background: white;
+        box-shadow: none;
+    }
+
+    .hands-box .minutes i{
+        width: 7px;
+        height: 170px;
+        background: #0ef;
+    }
+
+    .hands-box .hours i{
+        width: 8px;
+        height: 135px;
+        background: #0ef;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper {
+        position: fixed;
+        width: 325px;
+        height: 325px;
+    }
+
+    .logo {
+        position: absolute;
+        display: flex;
+        right: 141px;
+        top: 82px;
+        font-size: 20px;
+        color: rgb(7, 240, 221);
+    }
+
+    .number_hours span p {
+        font-size: 38px;
+    }
+
+    .hands-box .seconds {
+        width: 325px;
+        height: 325px;
+    }
+
+    .hands-box .minutes {
+        width: 290px;
+        height: 290px;
+    }
+
+    .hands-box .hours {
+        width: 220px;
+        height: 220px;
     }
 
     .hands-box .seconds i{
