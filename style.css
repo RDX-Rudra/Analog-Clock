@@ -49,7 +49,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 250px;
 }
 
 .hands-box .hand {
@@ -63,40 +62,66 @@ body{
     display: inline-block;
     transform-origin: bottom;
     border-radius: 50%;
+    box-shadow: 0 0 10px #0ef;
 }
 
 .hands-box .hours {
     width: 320px;
     height: 320px;
+    transform: rotate(40deg);
 }
 
 .hands-box .hours i{
     width: 10px;
     height: 160px;
-    background: red;
-    transform: rotate(40deg);
+    background: #0ef;
 }
 
 .hands-box .minutes {
     width: 450px;
     height: 450px;
+    transform: rotate(230deg);
+}
+
+.hands-box .minutes::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: #0ef;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #0ef;
 }
 
 .hands-box .minutes i{
     width: 7px;
     height: 225px;
-    background: yellow;
-    transform: rotate(230deg);
+    background: #0ef;
 }
 
 .hands-box .seconds {
     width: 480px;
     height: 480px;
+    transform: rotate(160deg);
+}
+
+.hands-box .seconds::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
 .hands-box .seconds i{
     width: 4px;
-    height: 240px;
+    height: calc(240px + 70px);
     background: white;
-    transform: rotate(160deg);
+    box-shadow: none;
 }
